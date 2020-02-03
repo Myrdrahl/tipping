@@ -6,13 +6,11 @@ function calculateService () {
 }
 
 function getBill () {
-  let billing = document.getElementById('bill')
-  bill = billing.value
+  let bill = document.getElementById('bill').value
   return bill
 }
 function sharing () {
-  let sharing = document.getElementById('sharing')
-  share = sharing.value
+  let share = document.getElementById('sharing').value
   return share
 }
 
