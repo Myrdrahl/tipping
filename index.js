@@ -21,8 +21,12 @@ submit.addEventListener('click', function () {
   let service = calculateService()
   let bill = getBill()
   let share = sharing()
-  console.log('Your share is: ' + ((bill / share) * service))
-  let page = document.getElementById('full')
-  page.innerText = ''
-  page.innerText = 'Your share of the bill is: ' + ((bill / share) * service)
+  let page2 = document.getElementById('notFull')
+  if (bill > 0 && share > 0) {
+    let page = document.getElementById('full')
+    page2.innerText = ''
+    page.innerText = 'Your share of the bill is: ' + ((bill / share) * service)
+  } else {
+    page2.innerText = 'You must enter valid numbers!'
+  }
 })
