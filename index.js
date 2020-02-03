@@ -22,4 +22,7 @@ submit.addEventListener('click', function () {
   let bill = getBill()
   let share = sharing()
   console.log('Your share is: ' + ((bill / share) * service))
+  let page = document.getElementById('full')
+  page.innerText = ''
+  page.innerText = 'Your share of the bill is: ' + ((bill / share) * service)
 })
